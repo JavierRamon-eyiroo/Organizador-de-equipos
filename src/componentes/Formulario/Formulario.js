@@ -22,36 +22,36 @@ const Formulario = (props) => {
             foto,
             equipo
         }
-        props.registrarColaborador(datosAEnviar)
+        registrarColaborador(datosAEnviar)
     }
 
     return <section className="formulario">
         <form onSubmit={manejarEnvio}>
-            <h2>Rellena el formulario para crear el colaborador</h2>
-            <CampoTexto 
-                titulo="Nombre" 
-                placeholder="Ingresar nombre." 
-                required 
-                valor={nombre} 
-                actualizarValor={actualizarNombre} 
-            />
-            <CampoTexto 
-                titulo="Puesto" 
-                placeholder="Ingresar puesto." 
+            <h2>Rellena el formulario para crear el colaborador.</h2>
+            <CampoTexto
+                titulo="Nombre"
+                placeholder="Ingresar nombre"
                 required
-                valor={puesto} 
-                actualizarValor={actualizarPuesto} 
+                valor={nombre}
+                actualizarValor={actualizarNombre}
             />
-            <CampoTexto 
-                titulo="Foto" 
-                placeholder="Ingresar enlace de foto." 
-                required 
-                valor={foto} 
-                actualizarValor={actualizarFoto} 
+            <CampoTexto
+                titulo="Puesto"
+                placeholder="Ingresar puesto"
+                required
+                valor={puesto}
+                actualizarValor={actualizarPuesto}
+            />
+            <CampoTexto
+                titulo="Foto"
+                placeholder="Ingresar enlace de foto"
+                required
+                valor={foto}
+                actualizarValor={actualizarFoto}
             />
             <ListaOpciones
                 valor={equipo}
-                actualizarEquipo={actualizarEquipo} 
+                actualizarEquipo={actualizarEquipo}
                 equipos={props.equipos}
             />
             <Boton>
